@@ -1,1 +1,39 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books | @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <a asp-controller="Home" asp-action="Index"><img id="logo" src="~/assets/logo.png" alt="Logotyp" title="My Books"></a>
+        
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Add" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Add" ? "active" : "")">Add book</a></li>
+                <li><a asp-controller="Home" asp-action="Books" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Books" ? "active" : "")">My books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="line"></div>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <br>
+        <p>Copyright © 2025 Jenny Lind</p>
+    </footer>
+
+</body>
+
+</html>

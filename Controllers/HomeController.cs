@@ -9,4 +9,16 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [Route("/add")]
+    public IActionResult Add()
+    {
+        return View();
+    }
+
+    [Route("/books")]
+    public IActionResult Books()
+    {
+        return View();
+    }
 }

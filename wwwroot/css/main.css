@@ -1,0 +1,101 @@
+/* Normalisering. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Dokumentet, body. */
+html,
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Huvudinnehållet. */
+main {
+    min-height: 100vh;
+}
+
+/* Header. */
+header {
+    padding: 2rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logotyp. */
+#logo {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Navigerings-meny. */
+nav ul {
+    list-style-type: none;
+    padding: 2rem 0 1rem 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav li {
+    padding: 0.25rem 0;
+}
+
+/* Nav-länkar. */
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Aktiv länk. */
+.active {
+    text-decoration: underline;
+    font-size: 120%;
+    color: darkgreen;
+}
+
+/* Rubriker och brödtext. */
+h1,
+h2,
+p:not(footer p) {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+p:not(footer p) {
+    padding: 2rem 1rem;
+    line-height: 1.6;
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+.line {
+    border-bottom: 3px solid #65ec62;
+}
+
+/* Footer. */
+footer {
+    height: 75px;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Media-queries. */
+@media (min-width: 426px) {
+
+    /* Lägger nav-länkar på en rad och ökar padding. */
+    nav li {
+        display: inline;
+        padding: 0.25rem 1.5rem;
+    }
+}
