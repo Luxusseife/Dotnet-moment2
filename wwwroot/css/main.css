@@ -62,23 +62,42 @@ nav a:hover {
     color: darkgreen;
 }
 
-/* Rubriker och brödtext. */
+/* Rubriker och väkomsttext på startsidan. */
 h1,
 h2,
-p:not(footer p) {
+#welcomeText {
     text-align: center;
     padding-top: 2rem;
 }
 
-p:not(footer p) {
+#welcomeText {
     padding: 2rem 1rem;
     line-height: 1.6;
     max-width: 60ch;
     margin: 0 auto;
 }
 
+/* Avskiljarlinje under navigering. */
 .line {
     border-bottom: 3px solid #65ec62;
+}
+
+/* Tabell för böcker. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+th {
+    background-color: #e9e9e9;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #c7c7c7;
+    padding: 0.45rem;
+    text-align: left;
 }
 
 /* Footer. */
