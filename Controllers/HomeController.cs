@@ -9,6 +9,8 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+        // Sätter titel på sidan.
+        ViewData["Title"] = "Home";
         return View();
     }
 
@@ -16,6 +18,9 @@ public class HomeController : Controller
     [Route("/add")]
     public IActionResult Add()
     {
+        // Sätter titel på sidan.
+        ViewData["Title"] = "Add book";
+
         // Sätter aktuellt år i ViewBag.
         var currentYear = DateTime.Now.Year;
         ViewBag.CurrentYear = currentYear;
@@ -72,6 +77,9 @@ public class HomeController : Controller
     [Route("/books")]
     public IActionResult Books()
     {
+        // Sätter titel på sidan.
+        ViewData["Title"] = "My books";
+
         // Läser in books.json-filen.
         string jsonStr = System.IO.File.ReadAllText("myBooks.json");
 
