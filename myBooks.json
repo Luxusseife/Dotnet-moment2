@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "Id": 1,
+    "BookName": "F\u00F6da utan r\u00E4dsla",
+    "Author": "S. Hell",
+    "ReleaseYear": 2009,
+    "Read": false
+  },
+  {
+    "Id": 2,
+    "BookName": "Med k\u00E4nsla f\u00F6r barns sj\u00E4lvk\u00E4nsla",
+    "Author": "P. Krantz Lindgren",
+    "ReleaseYear": 2014,
+    "Read": true
+  },
+  {
+    "Id": 3,
+    "BookName": "V\u00E4nta barn",
+    "Author": "U. Bj\u00F6rklund / H. Fjellvang / S. \u00C5hlund",
+    "ReleaseYear": 2012,
+    "Read": true
+  },
+  {
+    "Id": 5,
+    "BookName": "Lyh\u00F6rt f\u00F6r\u00E4ldraskap",
+    "Author": "M. Bergstr\u00F6m",
+    "ReleaseYear": 2013,
+    "Read": true
+  },
+  {
+    "Id": 6,
+    "BookName": "Leva med barn",
+    "Author": "M. K\u00F6hler / A. Reuter / J. Tell",
+    "ReleaseYear": 2020,
+    "Read": false
+  }
+]

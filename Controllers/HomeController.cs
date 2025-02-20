@@ -80,7 +80,7 @@ public class HomeController : Controller
         // Sätter titel på sidan.
         ViewData["Title"] = "My books";
 
-        // Läser in books.json-filen.
+        // Läser in myBooks.json-filen.
         string jsonStr = System.IO.File.ReadAllText("myBooks.json");
 
         // Deserialiserar JSON.
@@ -88,5 +88,33 @@ public class HomeController : Controller
 
         // Returnerar vyn och skickar med listan med böcker.
         return View(books);
+    }
+
+    [HttpPost]
+    [Route("/books")]
+    public IActionResult Delete(int id)
+    {
+        // Läser in books.json-filen.
+        string jsonStr = System.IO.File.ReadAllText("myBooks.json");
+
+        // Deserialiserar JSON.
+        var books = JsonSerializer.Deserialize<List<BookModel>>(jsonStr) ?? new List<BookModel>();
+
+        // Hittar boken med matchande ID.
+        var bookToErase = books.FirstOrDefault(b => b.Id == id);
+
+        // Raderar boken om ID hittas.
+        if (bookToErase != null)
+        {
+            books.Remove(bookToErase);
+
+            // Serialiserar JSON.
+            jsonStr = JsonSerializer.Serialize(books, jsonOptions);
+
+            // Skriver in/över ändringarna till myBooks.json-filen.
+            System.IO.File.WriteAllText("myBooks.json", jsonStr);
+        }
+
+        return RedirectToAction("Books");
     }
 }

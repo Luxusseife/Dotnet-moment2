@@ -118,7 +118,7 @@ td {
 }
 
 /* Formulär för att lägga till bok. */
-form {
+form:not(.delete) {
     background-color: #e9e9e9;
     padding: 3rem 3rem 2rem 3rem;
     margin: 2rem auto 0 auto;
@@ -145,6 +145,15 @@ input:not([type="checkbox"]) {
     border: none;
     cursor: pointer;
     margin-top: 2rem;
+}
+
+/* Radera-knapp. */
+button {
+    background-color: rgb(247, 97, 97);
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
 }
 
 /* Felmeddelande. */

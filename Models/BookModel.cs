@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 namespace Moment2.Models;
 
 public class BookModel
@@ -25,11 +26,13 @@ public class BookModel
     public bool Read { get; set; }
 
 
-    // Beräknade (formaterade) properties.
+    // Beräknade (formaterade) properties. Lagrar inte dessa i JSON-filen.
 
+    [JsonIgnore]
     // Gör boktitel till versaler.
     public string Title => BookName.ToUpper();
 
+    [JsonIgnore]
     // Sätter status utifrån booleans värde.
     public string Status => Read ? "Yes" : "No";
 }
