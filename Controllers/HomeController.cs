@@ -18,6 +18,21 @@ public class HomeController : Controller
         return View();
     }
 
+    // Hantering av POST-anrop.
+    [HttpPost]
+    public IActionResult Add(BookModel model)
+    {
+        // Validerar formulär.
+        if (ModelState.IsValid)
+        {
+            return View();
+        }
+        else
+        {
+            return View();
+        }
+    }
+
     [Route("/books")]
     public IActionResult Books()
     {

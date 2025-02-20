@@ -87,7 +87,8 @@ h2,
     width: 100%;
     max-width: 750px;
     margin: 0 auto;
-    overflow-x: auto; /* Tabellen blir scrollbar horisontellt i de minsta skärmarna. */
+    overflow-x: auto;
+    /* Tabellen blir scrollbar horisontellt i de minsta skärmarna. */
 }
 
 /* Tabell för böcker. */
@@ -102,7 +103,8 @@ th {
     font-weight: bold;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #c7c7c7;
     padding: 0.45rem;
     text-align: left;
@@ -121,6 +123,7 @@ input:not([type="checkbox"]) {
     height: 30px;
     width: 100%;
     max-width: 300px;
+    padding-left: 10px;
 }
 
 /* Checkboxen. */
@@ -129,10 +132,18 @@ input:not([type="checkbox"]) {
 }
 
 /* Lägg till-knapp. */
-#submit{
+#submit {
     background-color: #65ec62;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+}
+
+/* Felmeddelande. */
+span {
+    display: block;
+    color: red;
+    font-weight: bold;
 }
 
 /* Footer. */
@@ -151,5 +162,10 @@ footer {
     nav li {
         display: inline;
         padding: 0.25rem 1.5rem;
+    }
+
+    /* Felmeddelande. */
+    span {
+        display: inline;
     }
 }

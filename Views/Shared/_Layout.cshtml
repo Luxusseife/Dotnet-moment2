@@ -12,13 +12,20 @@
 <body>
 
     <header>
-        <a asp-controller="Home" asp-action="Index"><img id="logo" src="~/assets/logo.png" alt="Logotyp" title="My Books"></a>
-        
+        <a asp-controller="Home" asp-action="Index"><img id="logo" src="~/assets/logo.png" alt="Logotyp"
+                title="My Books"></a>
+
         <nav>
             <ul>
-                <li><a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">Home</a></li>
-                <li><a asp-controller="Home" asp-action="Add" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Add" ? "active" : "")">Add book</a></li>
-                <li><a asp-controller="Home" asp-action="Books" class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Books" ? "active" : "")">My books</a></li>
+                <li><a asp-controller="Home" asp-action="Index"
+                        class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">Home</a>
+                </li>
+                <li><a asp-controller="Home" asp-action="Add"
+                        class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Add" ? "active" : "")">Add
+                        book</a></li>
+                <li><a asp-controller="Home" asp-action="Books"
+                        class="@(ViewContext.RouteData.Values["Action"]?.ToString() == "Books" ? "active" : "")">My
+                        books</a></li>
             </ul>
         </nav>
     </header>
@@ -33,6 +40,12 @@
         <br>
         <p>Copyright © 2025 Jenny Lind</p>
     </footer>
+
+    <!-- Lägger till skript för att validering ska fungera. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 
 </body>
 
