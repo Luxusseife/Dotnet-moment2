@@ -1,16 +1,1 @@
-[
-    {
-        "Id": 1,
-        "BookName": "På rymmen i rymden",
-        "Author": "J. Donaldson / A. Sheffler",
-        "ReleaseYear": 2019,
-        "Read": true
-    },
-    {
-        "Id": 2,
-        "BookName": "Gatukatten Bob",
-        "Author": "J. Bowen",
-        "ReleaseYear": 2013,
-        "Read": false
-    }
-]
+[]
