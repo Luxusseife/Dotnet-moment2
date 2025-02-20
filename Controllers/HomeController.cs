@@ -12,9 +12,14 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
     [Route("/add")]
     public IActionResult Add()
     {
+        // Sätter aktuellt år i ViewBag.
+        var currentYear = DateTime.Now.Year;
+        ViewBag.CurrentYear = currentYear;
+
         return View();
     }
 
@@ -22,6 +27,10 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Add(BookModel model)
     {
+        // Sätter aktuellt år i ViewBag.
+        var currentYear = DateTime.Now.Year;
+        ViewBag.CurrentYear = currentYear;
+
         // Validerar formulär.
         if (ModelState.IsValid)
         {

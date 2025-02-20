@@ -20,7 +20,7 @@
         <br>
         <label asp-for="ReleaseYear"></label>
         <br>
-        <input asp-for="ReleaseYear">
+        <input asp-for="ReleaseYear" max="@ViewBag.CurrentYear">
         <span asp-validation-for="ReleaseYear"></span>
         <br>
         <label asp-for="Read"></label>

@@ -18,7 +18,7 @@ public class BookModel
 
     [Display(Name = "Release year:")]
     [Required(ErrorMessage = "Enter the release year!")]
-    [Range(1900, 2025)]
+    [Range(1500, int.MaxValue, ErrorMessage = "The release year must be between 1900 and the current year.")]
     public required int ReleaseYear { get; set; }
 
     [Display(Name = "Read (check for yes):")]

@@ -143,7 +143,6 @@ input:not([type="checkbox"]) {
 span {
     display: block;
     color: red;
-    font-weight: bold;
 }
 
 /* Footer. */
