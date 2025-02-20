@@ -1,7 +1,32 @@
+@model Moment2.Models.BookModel
+
 @{
     ViewData["Title"] = "Add book";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>This page will allow me to add books...</p>
+<div class="container">
+    <form method="post">
+        <label asp-for="BookName"></label>
+        <br>
+        <input asp-for="BookName">
+        <span asp-validation-for="BookName"></span>
+        <br>
+        <label asp-for="Author"></label>
+        <br>
+        <input asp-for="Author">
+        <span asp-validation-for="Author"></span>
+        <br>
+        <label asp-for="ReleaseYear"></label>
+        <br>
+        <input asp-for="ReleaseYear">
+        <span asp-validation-for="ReleaseYear"></span>
+        <br>
+        <label asp-for="Read"></label>
+        <input asp-for="Read">
+        <span asp-validation-for="Read"></span>
+        <br>
+        <input type="submit" value="Add book" id="submit">
+    </form>
+</div>

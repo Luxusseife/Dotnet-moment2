@@ -82,6 +82,14 @@ h2,
     border-bottom: 3px solid #65ec62;
 }
 
+/* Container för formulär/tabell. */
+.container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    overflow-x: auto; /* Tabellen blir scrollbar horisontellt i de minsta skärmarna. */
+}
+
 /* Tabell för böcker. */
 table {
     width: 100%;
@@ -98,6 +106,33 @@ th, td {
     border: 1px solid #c7c7c7;
     padding: 0.45rem;
     text-align: left;
+}
+
+/* Formulär för att lägga till bok. */
+form {
+    background-color: #e9e9e9;
+    padding: 3rem;
+    margin: 2rem auto;
+}
+
+/* Inputfält förutom checkboxen. */
+input:not([type="checkbox"]) {
+    margin: 5px 0 1rem 0;
+    height: 30px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Checkboxen. */
+#Read {
+    margin: 1rem 0;
+}
+
+/* Lägg till-knapp. */
+#submit{
+    background-color: #65ec62;
+    font-weight: bold;
+    border: none;
 }
 
 /* Footer. */
