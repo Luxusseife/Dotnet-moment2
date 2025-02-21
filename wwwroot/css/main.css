@@ -48,7 +48,7 @@ nav li {
 /* Nav-länkar. */
 nav a {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 nav a:hover {
@@ -147,24 +147,77 @@ input:not([type="checkbox"]) {
     margin-top: 2rem;
 }
 
-/* Radera-knapp. */
-button {
-    background-color: rgb(247, 97, 97);
-    border: none;
-    padding: 5px;
-    width: 100%;
-    font-weight: bold;
-}
-
-/* Felmeddelande. */
+/* Felmeddelande i formuläret. */
 span {
     display: block;
     color: red;
 }
 
+/* Radera-knapp. */
+button:not(#theme-toggle) {
+    background-color: #f76161;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tema-ändrings-knapp. */
+#theme-toggle {
+    background-color: #65ec62;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #f76161;
+}
+
+/* Ljust (default) och mörkt tema. */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #484848;
+    color: #dbdbdb;
+}
+
+.dark-theme a {
+    color: #dbdbdb;
+}
+
+.dark-theme .active {
+    color: #65ec62;
+}
+
+.dark-theme form {
+    background-color: #999999;
+    color: #000000;
+}
+
+.dark-theme input {
+    background-color: #ececec;
+    border: none;
+}
+
+.dark-theme table {
+    background-color: #ececec;
+    color: #000000;
+}
+
+.dark-theme th {
+    background-color: #999999;
+    color: #000000;
+}
+
 /* Footer. */
 footer {
-    height: 75px;
+    height: 100px;
     margin-top: auto;
     background-color: black;
     color: white;

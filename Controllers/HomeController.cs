@@ -11,6 +11,11 @@ public class HomeController : Controller
     {
         // Sätter titel på sidan.
         ViewData["Title"] = "Home";
+
+        // Sätter aktuellt år i ViewBag.
+        var currentYear = DateTime.Now.Year;
+        ViewBag.CurrentYear = currentYear;
+
         return View();
     }
 
@@ -79,6 +84,10 @@ public class HomeController : Controller
     {
         // Sätter titel på sidan.
         ViewData["Title"] = "My books";
+
+        // Sätter aktuellt år i ViewBag.
+        var currentYear = DateTime.Now.Year;
+        ViewBag.CurrentYear = currentYear;
 
         // Läser in myBooks.json-filen.
         string jsonStr = System.IO.File.ReadAllText("myBooks.json");
